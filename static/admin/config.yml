@@ -1,10 +1,13 @@
 backend:
   name: git-gateway
+  accept_roles:
+    -admin
+    -editor
   branch: master
   commit_messages:
-    create: 'Create {{collection}} “{{slug}}”'
-    update: 'Update {{collection}} “{{slug}}”'
-    delete: 'Delete {{collection}} “{{slug}}”'
+    create: '[skip ci] Create {{collection}} “{{slug}}”'
+    update: '[skip ci] Update {{collection}} “{{slug}}”'
+    delete: '[skip ci] Delete {{collection}} “{{slug}}”'
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
 
@@ -29,6 +32,7 @@ collections:
 
   - name: "pages"
     label: "Pages"
+    create: true
     files:
       - file: "src/pages/index.md"
         label: "Landing Page"
@@ -64,3 +68,19 @@ collections:
           - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
           - {label: Full_image, name: full_image, widget: image}
           - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
+
+  - name: "tours"
+    label: "Tours"
+    folder: "src/pages/tours"
+    create: true
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "tour-page"}
+      - {label: Title, name: title, widget: string}
+      - {label: Image, name: image, widget: image}
+      - {label: Description, name: description, widget: string, required: false}
+      - {label: Price, name: price, widget: object, fields: [{label: Adults Price, name: adults_price, widget: number, valueType: float}, {label: Children Price, name: children_price, widget: number, valueType: float}, {label: Adults Discount, name: adults_discount, widget: number, valueType: float, required: false}, {label: Children Discount, name: children_discount, widget: number, valueType: float, required: false}, {label: Quintanarroense price, name: q_price, widget: number, valueType: float, required: false}, {label: Transportation price, name: transportation, widget: list, required: false, fields: [{label: Desde, name: from, widget: string}, {label: Precio Adultos, name: adultPrice, widget: number, valueType: float}, {label: Precio niños, name: childPrice, widget: number, valueType: float}]}]}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: Tour type, name: tourType, widget: list }
+  
+
+      
