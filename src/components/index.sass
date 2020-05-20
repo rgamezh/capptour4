@@ -1,4 +1,4 @@
-
+@import "~bulma/sass/utilities/mixins.sass"
 .tour-type-section
 	padding: 150px 0 100px 0;
 .tour-type-container
@@ -108,3 +108,21 @@
 	100%
 		transform: skew(0, 5deg)
 
++mobile
+	.tour-type-section
+		padding-top: 50px;
+		padding-bottom: 50px;
+	.animatable, section
+		background: none !important;
+	.divider-top
+	    margin-top: -4.3rem
+	.divider-bottom
+	    margin-bottom: -4.3rem
+	.tour-type-container
+		.tour-type
+			height: auto;
+			border-radius: 50%
+			.tour-type-rounded
+				width: 100%
+				height: calc(100vw - 1.50rem)
+				position: relative !important

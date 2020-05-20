@@ -163,15 +163,10 @@ const Tours = ({
 								</div>
 								<div className="tour-info">
 									<h3 className="title has-text-white is-size-4">
-										Tour Tulum Con Cenotes Desde Cancún
+										Experiencia Isla Mujeres
 									</h3>
 									<p>
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.	
+										Salida de Cancún en diferentes horarios la capacidad máxima es de 15 personas. El tour tiene una duración de 6 horas, se rodea la Isla, se hace una breve visita por fuera del parque Garrafón para estar en contacto con las especies que habitan esta área. Posteriormente se visita la playa punta norte, catalogada como una de las mejores playas en el mundo.	
 									</p>
 									<div className="indicators">
 										<div>
@@ -195,173 +190,17 @@ const Tours = ({
 					                    <div className="price ">
 					                    	<p className="is-size-3 has-text-right">
 					                    		<span>desde</span>
-					                    		$3000
+					                    		$120
 					                    	</p>
-					                    	<button className="button is-rounded">
+											<Link 
+												to="/tours/experiencia-isla-mujeres/"
+												className="button is-rounded"
+												style={{
+													backgroundColor: 'rgb(234, 185, 42)'
+												}}
+											>
 					                    		Detalles
-					                    	</button>
-					                    </div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div className="tour has-text-white">
-							<div className="relative tour-wrapper is-flex-tablet">
-								<div className="tour-image"
-									style={{
-										backgroundImage: `url(${
-								          !!tulumImage.childImageSharp ? tulumImage.childImageSharp.fluid.src : tulumImage
-								        })`
-									}}
-								>
-								</div>
-								<div className="tour-info">
-									<h3 className="title has-text-white is-size-4">
-										Tour Tulum Con Cenotes Desde Cancún
-									</h3>
-									<p>
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.	
-									</p>
-									<div className="indicators">
-										<div>
-											<span>
-						                      <i className="fas fa-clock"></i>
-						                      <p>6 horas</p>
-						                    </span>
-						                    <span>
-						                      <i className="fas fa-utensils"></i>
-						                    </span>
-						                    <span>
-						                      <i className="fas fa-shuttle-van"></i>
-						                    </span>
-						                    <span className="stars">
-						                      <i className="far fa-star"></i>
-						                      <i className="far fa-star"></i>
-						                      <i className="far fa-star"></i>
-						                      <i className="far fa-star"></i>
-						                    </span>
-					                    </div>
-					                    <div className="price">
-					                    	<p className="is-size-3 has-text-right">
-					                    		<span>desde</span>
-					                    		$3000
-					                    	</p>
-					                    	<button className="button is-rounded">
-					                    		Detalles
-					                    	</button>
-					                    </div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div className="tour has-text-white">
-							<div className="relative tour-wrapper is-flex-tablet">
-								<div className="tour-image"
-									style={{
-										backgroundImage: `url(${
-								          !!tulumImage.childImageSharp ? tulumImage.childImageSharp.fluid.src : tulumImage
-								        })`
-									}}
-								>
-								</div>
-								<div className="tour-info">
-									<h3 className="title has-text-white is-size-4">
-										Tour Tulum Con Cenotes Desde Cancún
-									</h3>
-									<p>
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.	
-									</p>
-									<div className="indicators">
-										<div>
-											<span>
-						                      <i className="fas fa-clock"></i>
-						                      <p>6 horas</p>
-						                    </span>
-						                    <span>
-						                      <i className="fas fa-utensils"></i>
-						                    </span>
-						                    <span>
-						                      <i className="fas fa-shuttle-van"></i>
-						                    </span>
-						                    <span className="stars">
-						                      <i className="far fa-star"></i>
-						                      <i className="far fa-star"></i>
-						                      <i className="far fa-star"></i>
-						                      <i className="far fa-star"></i>
-						                    </span>
-					                    </div>
-					                    <div className="price">
-					                    	<p className="is-size-3 has-text-right">
-					                    		<span>desde</span>
-					                    		$3000
-					                    	</p>
-					                    	<button className="button is-rounded">
-					                    		Detalles
-					                    	</button>
-					                    </div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div className="tour has-text-white">
-							<div className="relative tour-wrapper is-flex-tablet">
-								<div className="tour-image"
-									style={{
-										backgroundImage: `url(${
-								          !!tulumImage.childImageSharp ? tulumImage.childImageSharp.fluid.src : tulumImage
-								        })`
-									}}
-								>
-								</div>
-								<div className="tour-info">
-									<h3 className="title has-text-white is-size-4">
-										Tour Tulum Con Cenotes Desde Cancún
-									</h3>
-									<p>
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.	
-									</p>
-									<div className="indicators">
-										<div>
-											<span>
-						                      <i className="fas fa-clock"></i>
-						                      <p>6 horas</p>
-						                    </span>
-						                    <span>
-						                      <i className="fas fa-utensils"></i>
-						                    </span>
-						                    <span>
-						                      <i className="fas fa-shuttle-van"></i>
-						                    </span>
-						                    <span className="stars">
-						                      <i className="far fa-star"></i>
-						                      <i className="far fa-star"></i>
-						                      <i className="far fa-star"></i>
-						                      <i className="far fa-star"></i>
-						                    </span>
-					                    </div>
-					                    <div className="price">
-					                    	<p className="is-size-3 has-text-right">
-					                    		<span>desde</span>
-					                    		$3000
-					                    	</p>
-					                    	<button className="button is-rounded">
-					                    		Detalles
-					                    	</button>
+					                    	</Link>
 					                    </div>
 									</div>
 								</div>
@@ -408,7 +247,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    tulum: file(relativePath: { eq: "tulum.jpg" }){
+    tulum: file(relativePath: { eq: "isla-mujeres.jpg" }){
       childImageSharp {
         fluid(maxWidth: 1920) {
           ...GatsbyImageSharpFluid

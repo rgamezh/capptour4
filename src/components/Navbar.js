@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import logo from '../img/capptour.webp'
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -34,63 +33,123 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <nav
-        className="navbar is-transparent"
-        role="navigation"
-        aria-label="main-navigation"
-      >
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-            </Link>
-            {/* Hamburger menu */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
-            >
-              <span />
-              <span />
-              <span />
-            </div>
-          </div>
-          <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
-          >
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
+      <div>
+        <nav
+          className="navbar brand-nav"
+        >
+          <div className="container">
+            <div className="navbar-brand">
+              <Link to="/" className="navbar-item" title="Logo">
+                <img src={logo} alt="Capptour" style={{ width: '188px' }} />
               </Link>
-              <Link className="navbar-item" to="/products">
-                Products
-              </Link>
-              <Link className="navbar-item" to="/blog">
-                Blog
-              </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
-              </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
-              </Link>
-            </div>
-            <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                target="_blank"
-                rel="noopener noreferrer"
+              {/* Hamburger menu */}
+              <div
+                className={`navbar-burger burger ${this.state.navBarActiveClass}`}
+                data-target="navMenu"
+                onClick={() => this.toggleHamburger()}
               >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
-              </a>
+                <span />
+                <span />
+                <span />
+              </div>
+            </div>
+            <div
+              id="navMenu"
+              className={`navbar-menu ${this.state.navBarActiveClass}`}
+            >
+              <div className="navbar-end flex-vertical-align has-text-centered">
+                <Link className="navbar-item secondary-links column-direction has-text-white" to="/about">
+                  <span className="icon is-small has-text-white">
+                    <i className="fas fa-shopping-cart"></i>
+                  </span>
+                  Carrito
+                </Link>
+                <Link className="navbar-item secondary-links column-direction has-text-white" to="/products">
+                  <span className="icon is-small has-text-white">
+                    <i className="far fa-comments"></i>
+                  </span>
+                  Contacto
+                </Link>
+                <Link className="navbar-item secondary-links column-direction has-text-white" to="/blog">
+                  <span className="icon is-small has-text-white">
+                    <i className="fas fa-users"></i>
+                  </span>
+                  Nosotros
+                </Link>
+                <Link className="navbar-item secondary-links column-direction has-text-white" to="/contact">
+                  <span className="icon is-small has-text-white">
+                    <i className="fab fa-facebook"></i>
+                  </span>
+                  Facebook
+                </Link>
+                <Link className="navbar-item secondary-links column-direction has-text-white" to="/contact/examples">
+                  <span className="icon is-small has-text-white">
+                    <i className="fab fa-instagram"></i>
+                  </span>
+                  Instagram
+                </Link>
+              </div>
+              <div className="navbar-end flex-vertical-align">
+                <input className="input is-rounded" type="text" placeholder="Buscar"/>
+              </div>
             </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+        <nav
+          className="navbar is-hidden-mobile"
+          role="navigation"
+          aria-label="main-navigation"
+          style={{backgroundColor: 'white' }}
+        >
+          <div className="container">
+            <div
+              id="navMenu"
+              className="navbar-menu navbar-centered"
+            >
+              <div className="is-flex flex-vertical-align has-text-centered">
+                <Link className="navbar-item is-purple" to="/">
+                  Inicio
+                </Link>
+                <Link className="navbar-item is-purple" to="/products">
+                  Hoteles
+                </Link>
+                <Link className="navbar-item is-purple" to="/blog">
+                  Restaurantes
+                </Link>
+                <Link className="navbar-item is-purple" to="/contact">
+                  Rentas vacacionales
+                </Link>
+                <Link className="navbar-item is-purple" to="/contact/examples">
+                  Paquetes vacacionales
+                </Link>
+                <div className="navbar-item has-dropdown is-hoverable">
+                  <Link className="navbar-item is-purple" to="/tours">
+                    Tours
+                  </Link>
+
+                  <div className="navbar-dropdown">
+                    <Link className="navbar-item is-purple" to="/contact/examples">
+                      Acuaticos
+                    </Link>
+                    <Link className="navbar-item is-purple" to="/contact/examples">
+                      Al aire libre
+                    </Link>
+                    <Link className="navbar-item is-purple" to="/contact/examples">
+                      Culturales
+                    </Link>
+                    <Link className="navbar-item is-purple" to="/contact/examples">
+                      Deportes Acuaticos
+                    </Link>
+                    <Link className="navbar-item is-purple" to="/contact/examples">
+                      Tematicos
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
     )
   }
 }

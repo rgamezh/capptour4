@@ -34,18 +34,11 @@ const TourComponent = ({data}) => {
 						<div className="column is-two-thirds">
 							<Img style={{borderRadius: '30px'}} fluid={image.childImageSharp.fluid} />
 							<h3 style={{marginTop: '3rem', color: '#462a6c', width: '80%', marginLeft: 'auto', marginRight: 'auto'}} className="has-text-centered title tour-page-description-title">
-								Tour en lancha por el canal de los piratas en la laguna de Bacalar
+								Visita las playas de Isla Mujeres, saliendo de Cancún para poder apreciar el Caribe Mexicano.
 							</h3>
 							<div className="tour-page-description" style={{color: '#504e4e'}}>
-								<p style={{marginBottom: '20px'}}>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus excepturi ipsa, error magni mollitia, hic quaerat saepe sunt, molestiae nemo illo. Nobis animi quia voluptas reiciendis assumenda fugiat ab sit.
-								</p>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-									Doloribus excepturi ipsa, error magni mollitia, hic quaerat saepe sunt, molestiae nemo illo. 
-									Nobis animi quia voluptas reiciendis assumenda fugiat ab sit.
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-									Doloribus excepturi ipsa, error magni mollitia, hic quaerat saepe sunt, molestiae nemo illo.
+									Salida de Cancún en diferentes horarios la capacidad máxima es de 15 personas. El tour tiene una duración de 6 horas, se rodea la Isla, se hace una breve visita por fuera del parque Garrafón para estar en contacto con las especies que habitan esta área. Posteriormente se visita la playa punta norte, catalogada como una de las mejores playas en el mundo.
 								</p>
 								<div className="columns" style={{marginTop: '2.1rem'}}>
 									<div className="column is-one-third has-text-centered">
@@ -134,18 +127,18 @@ const TourComponent = ({data}) => {
 						</div>
 						<div className="column is-one-third">
 							<h1 className="title t-yellow is-size-1-desktop has-text-centered" style={{borderBottom: '1px solid #eab92a'}}>
-								Tour Bacalar
+								Experiencia Isla Mujeres
 							</h1>
 							<div className="columns">
 								<div className="column is-half">
-									<p className="t-yellow is-size-3 has-text-centered has-text-weight-bold">50%<span className="is-size-7">de descuento</span></p>
+									<p className="t-yellow is-size-3 has-text-centered has-text-weight-bold">10%<span className="is-size-7">de descuento</span></p>
 									<p className="has-text-centered is-purple is-size-5 has-text-weight-bold">Adultos</p>
-									<p className="has-text-centered is-purple is-size-5 has-text-weight-bold">$ 2,O18.00 MXN</p>
+									<p className="has-text-centered is-purple is-size-5 has-text-weight-bold">$ 120.00 MXN</p>
 								</div>
 								<div className="column is-half">
-								<p className="t-yellow is-size-3 has-text-centered has-text-weight-bold">30%<span className="is-size-7">de descuento</span></p>
+								<p className="t-yellow is-size-3 has-text-centered has-text-weight-bold">0%<span className="is-size-7">de descuento</span></p>
 									<p className="has-text-centered is-purple is-size-5 has-text-weight-bold">Niños</p>
-									<p className="has-text-centered is-purple is-size-5 has-text-weight-bold">$ 1,OOO.00 MXN</p>
+									<p className="has-text-centered is-purple is-size-5 has-text-weight-bold">$ 80.00 MXN</p>
 								</div>
 							</div>
 							<form>
@@ -194,7 +187,7 @@ const TourComponent = ({data}) => {
 								</div>
 								<p className="has-text-centered is-size-3-desktop is-size-4-mobile has-text-weight-bold is-purple">
 									Total:
-									<span style={{marginLeft: '2rem'}}>$2,018.00 MXN</span>
+									<span style={{marginLeft: '2rem'}}>$120.00 MXN</span>
 								</p>
 								<input style={{width: '100%', backgroundColor: '#eab92a', color: '#000', marginTop: '30px'}} type="submit" className="button is-large has-text-white" value="COMPRAR" />
 							</form>           
@@ -473,7 +466,7 @@ export const tourQuery = graphql`
 		        }
 			}
 		}
-		acuaticos: file(relativePath: { eq: "acuaticos.jpg" }){
+		acuaticos: file(relativePath: { eq: "isla-mujeres.jpg" }){
 	      childImageSharp {
 	        fluid(maxWidth: 1920) {
 	          ...GatsbyImageSharpFluid
@@ -514,6 +507,13 @@ export const tourQuery = graphql`
 	          ...GatsbyImageSharpFluid
 	        }
 	      }
-	    }
+		}
+		isla: file(relativePath: { eq: "isla-mujeres.jpg" }){
+			childImageSharp {
+			  fluid(maxWidth: 1920) {
+				...GatsbyImageSharpFluid
+			  }
+			}
+		  }
 	}
 `
