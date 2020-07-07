@@ -3,8 +3,11 @@ templateKey: tour-page
 title: 'Experiencia Isla Mujeres '
 image: /img/isla-mujeres-deposit-1200.jpg
 description: >-
-  Visita las playas de Isla Mujeres, saliendo de Cancún para poder apreciar el
-  Caribe Mexicano.
+  Salida de Cancún en diferentes horarios la capacidad máxima es de 15 personas.
+  El tour tiene una duración de 6 horas, se rodea la Isla, se hace una breve
+  visita por fuera del parque Garrafón para estar en contacto con las especies
+  que habitan esta área. Posteriormente se visita la playa punta norte,
+  catalogada como una de las mejores playas en el mundo.
 price:
   adults_price: 120
   children_price: 80
