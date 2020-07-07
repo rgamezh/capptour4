@@ -5,7 +5,9 @@ import Img from "gatsby-image"
 
 const Tours = ({
 	toursBack,
-	tulumImage
+	tulumImage,
+	bacalar,
+	holbox,
 }) => (
   <Layout>
     <div>
@@ -211,17 +213,17 @@ const Tours = ({
 								<div className="tour-image"
 									style={{
 										backgroundImage: `url(${
-								          !!tulumImage.childImageSharp ? tulumImage.childImageSharp.fluid.src : tulumImage
+								          !!holbox.childImageSharp ? holbox.childImageSharp.fluid.src : holbox
 								        })`
 									}}
 								>
 								</div>
 								<div className="tour-info">
 									<h3 className="title has-text-white is-size-4">
-										Experiencia Isla Mujeres
+										Holbox
 									</h3>
 									<p>
-										Salida de Cancún en diferentes horarios la capacidad máxima es de 15 personas. El tour tiene una duración de 6 horas, se rodea la Isla, se hace una breve visita por fuera del parque Garrafón para estar en contacto con las especies que habitan esta área. Posteriormente se visita la playa punta norte, catalogada como una de las mejores playas en el mundo.	
+										El recorrido clásico dura tres horas, es un paseo en bote, visitas tres puntos de la hermosa isla de Holbox, que son: la isla de los pájaros, que encuentra innumerables aves, como el pelícano gris, la garceta, los cormoranes, etc. 
 									</p>
 									<div className="indicators">
 										<div>
@@ -245,7 +247,62 @@ const Tours = ({
 					                    <div className="price ">
 					                    	<p className="is-size-3 has-text-right">
 					                    		<span>desde</span>
-					                    		$120
+					                    		$
+					                    	</p>
+											<Link 
+												to="/tours/experiencia-isla-mujeres/"
+												className="button is-rounded"
+												style={{
+													backgroundColor: 'rgb(234, 185, 42)'
+												}}
+											>
+					                    		Detalles
+					                    	</Link>
+					                    </div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div className="tour has-text-white">
+							<div className="relative tour-wrapper is-flex-tablet">
+								<div className="tour-image"
+									style={{
+										backgroundImage: `url(${
+								          !!bacalar.childImageSharp ? bacalar.childImageSharp.fluid.src : bacalar
+								        })`
+									}}
+								>
+								</div>
+								<div className="tour-info">
+									<h3 className="title has-text-white is-size-4">
+										Bacalar Deluxe
+									</h3>
+									<p>
+										Conocerás a nuestro equipo en la marina, donde recibirás instrucciones para prepararte a la aventura de 4 horas.	
+									</p>
+									<div className="indicators">
+										<div>
+											<span>
+						                      <i className="fas fa-clock"></i>
+						                      <p>6 horas</p>
+						                    </span>
+						                    <span>
+						                      <i className="fas fa-utensils"></i>
+						                    </span>
+						                    <span>
+						                      <i className="fas fa-shuttle-van"></i>
+						                    </span>
+						                    <span className="stars">
+						                      <i className="far fa-star"></i>
+						                      <i className="far fa-star"></i>
+						                      <i className="far fa-star"></i>
+						                      <i className="far fa-star"></i>
+						                    </span>
+					                    </div>
+					                    <div className="price ">
+					                    	<p className="is-size-3 has-text-right">
+					                    		<span>desde</span>
+					                    		$800
 					                    	</p>
 											<Link 
 												to="/tours/experiencia-isla-mujeres/"
@@ -288,6 +345,8 @@ export default class ToursPage extends React.Component {
 			<Tours 
 				toursBack={this.props.data.toursBack}
 				tulumImage={this.props.data.tulum}
+				bacalar={this.props.data.bacalar}
+				holbox={this.props.data.holbox}
 			/>
 		)
 	}
@@ -303,6 +362,20 @@ export const pageQuery = graphql`
       }
     }
     tulum: file(relativePath: { eq: "isla-mujeres.jpg" }){
+      childImageSharp {
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    bacalar: file(relativePath: { eq: "bacalar.jpg" }){
+      childImageSharp {
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    holbox: file(relativePath: { eq: "holbox.jpg" }){
       childImageSharp {
         fluid(maxWidth: 1920) {
           ...GatsbyImageSharpFluid
