@@ -13,6 +13,9 @@ const TourComponent = ({data}) => {
 	const { frontmatter } = data.markdownRemark
 	const title = data.markdownRemark.frontmatter.title
 	const img = data.markdownRemark.frontmatter.image
+	const description = frontmatter.description
+	const adults = frontmatter.price.adults_price
+	const children = frontmatter.price.children_price
 	const image = data.acuaticos
 	const descuento = data.descuento
 	const cancun = data.cancun
@@ -39,7 +42,7 @@ const TourComponent = ({data}) => {
 							</h3>
 							<div className="tour-page-description" style={{color: '#504e4e'}}>
 								<p>
-									Salida de Cancún en diferentes horarios la capacidad máxima es de 15 personas. El tour tiene una duración de 6 horas, se rodea la Isla, se hace una breve visita por fuera del parque Garrafón para estar en contacto con las especies que habitan esta área. Posteriormente se visita la playa punta norte, catalogada como una de las mejores playas en el mundo.
+									{description}
 								</p>
 								<div className="columns" style={{marginTop: '2.1rem'}}>
 									<div className="column is-one-third has-text-centered">
@@ -128,18 +131,18 @@ const TourComponent = ({data}) => {
 						</div>
 						<div className="column is-one-third">
 							<h1 className="title t-yellow is-size-1-desktop has-text-centered" style={{borderBottom: '1px solid #eab92a'}}>
-								Experiencia Isla Mujeres
+								{title}
 							</h1>
 							<div className="columns">
 								<div className="column is-half">
 									<p className="t-yellow is-size-3 has-text-centered has-text-weight-bold">10%<span className="is-size-7">de descuento</span></p>
 									<p className="has-text-centered is-purple is-size-5 has-text-weight-bold">Adultos</p>
-									<p className="has-text-centered is-purple is-size-5 has-text-weight-bold">$ 120.00 MXN</p>
+									<p className="has-text-centered is-purple is-size-5 has-text-weight-bold">$ {adults} MXN</p>
 								</div>
 								<div className="column is-half">
 								<p className="t-yellow is-size-3 has-text-centered has-text-weight-bold">0%<span className="is-size-7">de descuento</span></p>
 									<p className="has-text-centered is-purple is-size-5 has-text-weight-bold">Niños</p>
-									<p className="has-text-centered is-purple is-size-5 has-text-weight-bold">$ 80.00 MXN</p>
+									<p className="has-text-centered is-purple is-size-5 has-text-weight-bold">$ {children} MXN</p>
 								</div>
 							</div>
 							<form>
@@ -188,7 +191,7 @@ const TourComponent = ({data}) => {
 								</div>
 								<p className="has-text-centered is-size-3-desktop is-size-4-mobile has-text-weight-bold is-purple">
 									Total:
-									<span style={{marginLeft: '2rem'}}>$120.00 MXN</span>
+									<span style={{marginLeft: '2rem'}}>${adults} MXN</span>
 								</p>
 								<input style={{width: '100%', backgroundColor: '#eab92a', color: '#000', marginTop: '30px'}} type="submit" className="button is-large has-text-white" value="COMPRAR" />
 							</form>           
