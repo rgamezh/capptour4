@@ -22,6 +22,7 @@ const TourComponent = ({data}) => {
  
 	return(
 		<Layout>
+			{console.log(html)}
 			<section>
 				<div className="container"
 					style={{
@@ -32,9 +33,9 @@ const TourComponent = ({data}) => {
 				>
 					<div className="columns">
 						<div className="column is-two-thirds">
-							<Img style={{borderRadius: '30px'}} fluid={image.childImageSharp.fluid} />
+							<Img style={{borderRadius: '30px'}} fluid={img.childImageSharp.fluid} />
 							<h3 style={{marginTop: '3rem', color: '#462a6c', width: '80%', marginLeft: 'auto', marginRight: 'auto'}} className="has-text-centered title tour-page-description-title">
-								Visita las playas de Isla Mujeres, saliendo de Cancún para poder apreciar el Caribe Mexicano.
+								{title}
 							</h3>
 							<div className="tour-page-description" style={{color: '#504e4e'}}>
 								<p>
