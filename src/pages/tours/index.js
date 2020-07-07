@@ -206,6 +206,61 @@ const Tours = ({
 								</div>
 							</div>
 						</div>
+						<div className="tour has-text-white">
+							<div className="relative tour-wrapper is-flex-tablet">
+								<div className="tour-image"
+									style={{
+										backgroundImage: `url(${
+								          !!tulumImage.childImageSharp ? tulumImage.childImageSharp.fluid.src : tulumImage
+								        })`
+									}}
+								>
+								</div>
+								<div className="tour-info">
+									<h3 className="title has-text-white is-size-4">
+										Experiencia Isla Mujeres
+									</h3>
+									<p>
+										Salida de Cancún en diferentes horarios la capacidad máxima es de 15 personas. El tour tiene una duración de 6 horas, se rodea la Isla, se hace una breve visita por fuera del parque Garrafón para estar en contacto con las especies que habitan esta área. Posteriormente se visita la playa punta norte, catalogada como una de las mejores playas en el mundo.	
+									</p>
+									<div className="indicators">
+										<div>
+											<span>
+						                      <i className="fas fa-clock"></i>
+						                      <p>6 horas</p>
+						                    </span>
+						                    <span>
+						                      <i className="fas fa-utensils"></i>
+						                    </span>
+						                    <span>
+						                      <i className="fas fa-shuttle-van"></i>
+						                    </span>
+						                    <span className="stars">
+						                      <i className="far fa-star"></i>
+						                      <i className="far fa-star"></i>
+						                      <i className="far fa-star"></i>
+						                      <i className="far fa-star"></i>
+						                    </span>
+					                    </div>
+					                    <div className="price ">
+					                    	<p className="is-size-3 has-text-right">
+					                    		<span>desde</span>
+					                    		$120
+					                    	</p>
+											<Link 
+												to="/tours/experiencia-isla-mujeres/"
+												className="button is-rounded"
+												style={{
+													backgroundColor: 'rgb(234, 185, 42)'
+												}}
+											>
+					                    		Detalles
+					                    	</Link>
+					                    </div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 					<nav className="pagination is-centered" role="navigation" aria-label="pagination">
 					  <a href="#" className="pagination-previous">Previous</a>
