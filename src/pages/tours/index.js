@@ -250,7 +250,7 @@ const Tours = ({
 					                    		$
 					                    	</p>
 											<Link 
-												to="/tours/experiencia-isla-mujeres/"
+												to="/tours/holbox/"
 												className="button is-rounded"
 												style={{
 													backgroundColor: 'rgb(234, 185, 42)'
@@ -305,7 +305,7 @@ const Tours = ({
 					                    		$800
 					                    	</p>
 											<Link 
-												to="/tours/experiencia-isla-mujeres/"
+												to="/tours/bacalar-deluxe/"
 												className="button is-rounded"
 												style={{
 													backgroundColor: 'rgb(234, 185, 42)'
@@ -368,14 +368,14 @@ export const pageQuery = graphql`
         }
       }
     }
-    bacalar: file(relativePath: { eq: "bacalar.jpg" }){
+    bacalar: file(relativePath: { eq: "bacalar.jpeg" }){
       childImageSharp {
         fluid(maxWidth: 1920) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    holbox: file(relativePath: { eq: "holbox.jpg" }){
+    holbox: file(relativePath: { eq: "holbox.jpeg" }){
       childImageSharp {
         fluid(maxWidth: 1920) {
           ...GatsbyImageSharpFluid
